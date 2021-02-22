@@ -1,0 +1,63 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Lesson view</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div ng-controller="indexController">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="#">Lesson view page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lesson_edit.html">Lesson edit page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file_view.html">File view page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file_edit.html">File edit page</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <h1>Lesson view page</h1>
+            <h2>Lesson list</h2>
+            <table class="table table-hover" cellpadding="0" cellspacing="0">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Title</td>
+                    <td>Description</td>
+                    <td>Files List [ARRAY ID FILES]</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="l in LessonsList">
+                    <td>{{l.id}}</td>
+                    <td>{{l.title}}</td>
+                    <td>{{l.description}}</td>
+                    <td>{{l.filesList}}
+                        {{l.idFilesList}}
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="index.js"></script>
+    </div>
+</div>
+</body>
+</html>
