@@ -1,5 +1,7 @@
 # spring-boot-education
 
+http://localhost:8189/education/ - адрес приложения
+
 **Lesson view page .html**
 Таблица с информацией об уроках
 Files List [ARRAY ID FILES] - массив id прикрепленных к уроку файлов
