@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Lesson edit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div ng-controller="indexController">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Lesson view page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Lesson edit page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file_view.html">File view page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file_edit.html">File edit page</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Lesson edit page</h1>
+        <h2>Update or create a new lesson</h2>
+        <form novalidate ng-submit="editLesson()">
+            <div class="form-group row">
+                <div class="col-sm">
+                    <label for="idLesson">ID</label>
+                    <input class="form-control" type="number" ng-model="form.id" id="idLesson"
+                           placeholder="id lesson">
+                </div>
+                <div class="col-sm">
+                    <label for="titleLesson">Title</label>
+                    <input class="form-control" type="text" ng-model="form.title" id="titleLesson"
+                           placeholder="title">
+                </div>
+                <div class="col-sm">
+                    <label for="descriptionLesson">Description</label>
+                    <input class="form-control" type="text" ng-model="form.description" id="descriptionLesson"
+                           placeholder="description">
+                </div>
+                <div class="col-sm align-self-end">
+                    <button class="btn btn-success" type="submit">Сonfirm</button>
+                </div>
+            </div>
+        </form>
+        <script src="index.js"></script>
+    </div>
+</div>
+</body>
+</html>
